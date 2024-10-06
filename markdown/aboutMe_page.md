@@ -50,7 +50,38 @@ Parker Stuart
 - Created all models and scripts
 - Optimized all models and performance in the scene
 
-**Honors and Rewards**
+### Skills
+
+**Engines**
+- Unity
+- Unreal
+- Twine
+
+**Languages**
+- C#
+- Python
+- HTML
+- CSS
+- MD
+
+**Softwares**
+- After Effects
+- Asana
+- Audition
+- Blender
+- Git
+- Illustrator
+- Maya
+- Media Encoder
+- Perforce
+- Photoshop
+- Premiere Procreate
+- Substance Painter
+- Substance Sampler
+- Zapier
+- Zbrush
+
+### Honors and Rewards
 - Dean’s List, **Drexel University** *January 2023 – Current* 
 - SIGGRAPH Faculty Submitted Student Work Exhibition, **Drexel University** *June 2023*
 - Dean’s List, **Drexel University** *September 2021 – September 2022*

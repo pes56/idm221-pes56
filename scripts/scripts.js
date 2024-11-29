@@ -1,16 +1,4 @@
-function toggleMenu() {
-    const navbar = document.getElementById('navbar');
-    navbar.classList.toggle('hidden');
-}
 
-document.addEventListener('click', function(event) {
-    const navMenu = document.getElementById('navbar');
-    const menuIcon = document.querySelector('.menu-icon');
-
-    if (!navMenu.contains(event.target) && !menuIcon.contains(event.target)) {
-        navMenu.classList.add('hidden');
-    }
-});
 function loadHeader() {
     fetch('header.html')
         .then(response => {

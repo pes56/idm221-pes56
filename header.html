@@ -1,19 +1,25 @@
 <header id="top">
+
     <div class="header-content">
         <img src="logo.png" alt="Logo" class="logo" />
-        <div class="menu-icon" onclick="toggleMenu()"> &#9776;
-        </div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <svg class="hamburger" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="line line-1" d="M3 6h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path class="line line-2" d="M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path class="line line-3" d="M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/aboutMe.html">About Me</a></li>
+                <li><a href="/resume.html">Resume</a></li>
+                <li><a href="/gameDesign.html">Game Design</a></li>
+                <li><a href="/3dArt.html">3D Art</a></li>
+                <li><a href="/2dArt.html">2D Art</a></li>
+            </ul>
+        </nav>
     </div>
     
-    <nav id="navbar" class="hidden">
-        <div  class="menu-icon" onclick="toggleMenu()">&#9776; </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gameDesign.html">Game Design</a></li>
-            <li><a href="2dArt.html">2D Art</a></li>
-            <li><a href="3dArt.html">3D Art</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="aboutMe.html">About Me</a></li>
-        </ul>
-    </nav>
 </header>

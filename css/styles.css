@@ -167,6 +167,7 @@ a {
     }
 
     img {
+        vertical-align: middle;
         top: 0;
         left: 0;
         width: 100%;
@@ -193,7 +194,7 @@ a {
 
     h2 {
         font-size: 1.1rem;
-        margin: 0 1rem .25rem;
+        margin: .25rem 1rem .25rem;
     }
 }
 

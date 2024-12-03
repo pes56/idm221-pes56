@@ -262,13 +262,16 @@ a {
     #download-resume {
         
         margin-top: .5rem;
-        button {
-            background: linear-gradient(to bottom, var(--teal), var(--darkTeal));
-            border: none;
-            border-radius: 5px;
-            color: var(--white);
+        display: inline-block;
+        padding: .5rem;
+        background: linear-gradient(to bottom, var(--teal), var(--darkTeal));
+        border: none;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        a {
+            text-decoration: none;
             font-size: large;
-            padding: .5rem;
         }
     }
 }

@@ -1,26 +1,30 @@
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat_Regular.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Inter';
     src: url('../fonts/Inter_Regular.ttf') format('truetype');
     font-weight: 100 900;
+    font-display: swap;
 }
 
 html {
     --teal: #007A7A;
     --darkTeal: #2F4F4F;
     --white: #f5f5f5;
-    --black: #333333;
-    --neon-green: #8BC34A;
+    --black: #222222;
+    --gray: #EBEBEB;
+    --neon-green: #7cca23;
 
     --font-montserrat: 'Montserrat', Arial, Impact, 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
 
     scroll-behavior: smooth;
-    margin: 0;
+
 }
 
 * {
@@ -43,35 +47,41 @@ body {
 }
 
 h1, h2 {
+    margin: 0 1rem 0 1rem;
     color: var(--white);
+    font-family: var(--font-inter);
 }
 
 h1 {
-    font-family: var(--font-montserrat);
+   
     font-weight: 700;
     font-size: 2rem;
-    margin-top: 0px;
 }
 
 h2 {
-    font-family: var(--font-inter);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     
 }
 
 h3 {
-    font-size: 1.3rem;
-    font-weight: medium;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 p {
     color: var(--white);
-    text-align: center;
+    font-family: var(--font-montserrat);
+    margin: 0 1rem 1rem 1rem;
+}
+
+a {
+    font-family: var(--font-inter);
 }
 
 .breadcrumb {
     padding: 1rem;
+    font-family: var(--font-inter);
     font-size: 1rem;
     color: var(--white);
 
@@ -81,37 +91,27 @@ p {
     }
 }
 
-.project-progress{
-    p {
-        text-align: left;
+#homepage-header {
+
+    margin-top: .75rem;
+
+    a {
+        text-decoration: none;
     }
 
-}
-
-.project-hero-img {
-
-    p {
-        text-align: left;
+    h1 {
+        line-height: 1.75rem;
     }
 
-    .project-video {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        max-width: 100%; 
-    }
-    video {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
+    h2 {
+        font-family: var(--font-montserrat);
+        font-weight: 400;
+        
     }
 
-}
-
-.project-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+    .highlight {
+        color: var(--neon-green);
+    }
 }
 
 #about-me-page {
@@ -123,19 +123,48 @@ p {
         margin: 0;
     }
 
-    button {
-        padding: 1% 1%;
-        font-size: .625rem;
-        background-color: var(--teal);
-        color: var(--white);
-        border: none;
-        border-radius: .3125rem;
+    #resume-button {
+        display: flex;
+        justify-content: center;
+    
+        button {
+            background: linear-gradient(to bottom, var(--teal), var(--darkTeal));
+            border: none;
+            border-radius: 5px;
+            color: var(--white);
+            font-size: large;
+            padding: .5rem;
+            height: auto;
+            
+        }
     }
 }
 
+#headshot {
+    padding: 0 1.25rem;
+}
+
 .content-section {
-    background-color: var(--teal);
-    margin-bottom: 1rem;
+    padding: 1rem;
+
+    .link-wrapper {
+        background: linear-gradient(to bottom, var(--teal) 90%, var(--darkTeal));
+        display: block;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    p {
+        text-wrap: nowrap;
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--white);
+        font-size: 1.5rem;
+        z-index: 2; 
+        margin: 0;
+    }
 
     img {
         top: 0;
@@ -143,55 +172,111 @@ p {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        margin: 0;
+    }
+
+    .coming-soon-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        img {
+            opacity: 80%;
+        }
+    }
+
+    .project-link {
+        overflow: hidden;
+        display: block;
+        text-decoration: none;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+        margin: 0 1rem .25rem;
     }
 }
 
-.page-section {
-    display: grid;
-    padding: 1.25rem;
-    background-color: var(--teal);
-    border-radius: .5rem;
-    margin: 1.25rem 0;
+.project-progress {
+
+    p {
+        font-family: var(--font-montserrat);
+        line-height: 1.25rem;
+        color: var(--white);
+        text-align: left;
+        margin: 0 1.25rem 1.75rem;
+    }
+
+    .project-video {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 1.25rem;
+        
+    }
+    
+    video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        
+    }
+
+    .image-container {
+        display: block;
+        max-width: 100%;
+        margin: 0 1.25rem;
+        overflow: hidden;
+    }
+
 }
 
-.contact-me-button {
+#contact-me-button {
     display: flex;
     justify-content: center;
+
+    button {
+        background: linear-gradient(to bottom, var(--teal), var(--darkTeal));
+        border: none;
+        border-radius: 5px;
+        color: var(--white);
+        font-size: large;
+        padding: .5rem;
+    }
 }
 
 #resume-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 1rem 2rem;
-
+    padding: 0 1.25rem .5rem;
+    text-align: center;
+    
     p {
         margin: 0;
     }
 
-    #resume-header-contact-info {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+    a {
+        color: var(--white);
     }
 
     #download-resume {
-        padding: 0.75rem 1.5rem;
-        background-color: var(--teal);
-        color: var(--white);
-        border: none;
-        border-radius: 0.375rem;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
+        
+        margin-top: .5rem;
+        button {
+            background: linear-gradient(to bottom, var(--teal), var(--darkTeal));
+            border: none;
+            border-radius: 5px;
+            color: var(--white);
+            font-size: large;
+            padding: .5rem;
+        }
     }
 }
 
 #resume {
-    padding: .5rem;
+    padding: 0 1.25rem .5rem;
 
     .resume-section {
-
         h2 {
             margin-bottom: 0;
         }
@@ -200,32 +285,45 @@ p {
         }
 
         .resume-section-item {
+            padding-inline-start: 0;
             flex-direction: column;
             width: 100%;
-            background-color: var(--white);
+            color: var(--white);
 
             h3 {
-                
+                font-family: var(--font-inter);
+                color: var(--white);
                 font-size: 5vw;
+            }
+
+            ul {
+                font-family: var(--font-montserrat);
             }
         }
 
         .resume-section-item-bullets{
-            background-color: var(--white);
+            color: var(--white);
+            font-family: var(--font-inter);
+
+            h3 {
+                font-size: 1rem;
+            }
 
             ul {
-                font-size: .85rem;
+                padding-inline-start: 1.25rem;
+                font-size: .75rem;
                 column-count: 2;
+                column-gap: 0;
                 list-style-position: inside;
+                font-family: var(--font-montserrat);
             }
         }
     }
 }
 
 header {
-    background-color: var(--white);
+    background: linear-gradient(to bottom, var(--teal), var(--darkTeal));
     padding: .625rem 1.25rem;
-    margin-bottom: 1.25rem;
     display: flex;
 
     a {
@@ -243,7 +341,8 @@ header {
         z-index: 20;
 
         .hamburger {
-            transition: transform 0.3s ease;
+            color: var(--white);
+            transform-origin: center center;
         }
     }
 
@@ -255,61 +354,83 @@ header {
     }
 
     nav {
-        background: var(--white);
+        background: linear-gradient(to bottom, var(--teal), var(--darkTeal));
         height: 100vh;
         width: 50vw;
         transition: right 0.3s ease-in-out;
-      
-        ul {
-          list-style: none;
-          margin: 1rem 0;
-          padding: 2rem;
-      
-          li {
-            margin-bottom: 1rem;
-      
-            a {
-              color: var(--black);
-              text-decoration: none;
-            }
-          }
-        }
-      
         position: fixed;
         right: -500px;
         top: 0;
         z-index: 10;
-      }
+      
+        ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            margin-top: 2rem;
+            padding: 1rem;
+            text-wrap: nowrap;
     
-      .nav-toggle:checked ~ nav {
+            li {
+                margin-bottom: 1rem;
+        
+                a {
+                    color: var(--white);
+                    text-decoration: none;
+                }
+            }
+        }
+      
+    }
+    
+    .nav-toggle:checked ~ nav {
         right: 0;
-      }
+    }
 
-      .nav-toggle:checked ~ .header-content label .hamburger {
+    .nav-toggle:checked ~ .header-content label svg.hamburger {
         transform: rotate(90deg);
+        transition: transform 0.3s ease;
     }
 
 }
 
 footer {
-    
-    background-color: var(--white); 
-    border-radius: .5rem;
-    margin: 1rem 0;
+    position: relative;
+    background: linear-gradient(to bottom, var(--teal), var(--darkTeal)); 
+    margin-top: 1rem;
     padding: 20px 0;
     width: 100%;
 
     .footer-content {
-        font-weight: lighter;
+       
+
+        .social-links {
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+            display: flex;
+            gap: 5px;
+        }
+        
+        .social-link {
+            display: inline-block;
+        }
+        
+        .social-icon {
+            width: 35px;
+            height: auto;
+        }
+
         text-align: center;
 
         a {
-            color: var(--darkTeal);
-            font-weight: lighter;
+            color: var(--white);
         }
 
         p{
-            color: var(--darkTeal);
+            font-family: var(--font-inter);
+            color: var(--white);
+            margin: 0;
         }
     }
     
